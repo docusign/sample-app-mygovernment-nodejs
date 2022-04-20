@@ -1,0 +1,85 @@
+@use '../variables/variables' as v;
+
+$padding: 25px;
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  display: grid;
+  grid-template-rows: 40px 1fr;
+
+  position: relative;
+  width: 45%;
+  margin: 0 auto;
+  height: auto;
+  max-height: 70vh;
+  background: v.$whiteColor;
+  border-radius: v.$borderRadius;
+  line-height: 20px;
+}
+
+.popup-header {
+  grid-row: 1 / 2;
+  background-color: black;
+  border-top-left-radius: v.$borderRadius;
+  border-top-right-radius: v.$borderRadius;
+
+  h1 {
+    color: v.$whiteColor;
+    font-size: v.$mediumTextSize;
+    padding-left: $padding;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.popup-desc {
+  grid-row: 2 / 3;
+  overflow-y: auto;
+  padding-top: 10px;
+  padding-left: $padding;
+  padding-right: $padding;
+  padding-bottom: $padding;
+
+  h2 {
+    margin-top: 22px;
+    margin-bottom: 5px;
+  }
+
+  h3 {
+    margin-bottom: 4px;
+  }
+}
+
+@media (max-width: v.$tabletScreenSize) {
+  .box {
+    width: 60%;
+  }
+}
+
+@media (max-width: 800px) {
+  .box {
+    width: 80%;
+  }
+}
+
+.close-button {
+  cursor: pointer;
+  font-size: v.$bigTextSize;
+  font-weight: 400;
+  color: v.$whiteColor;
+  position: absolute;
+  top: 8px;
+  right: 15px;
+}

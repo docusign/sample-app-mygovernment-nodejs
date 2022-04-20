@@ -1,0 +1,56 @@
+@use '../variables/variables' as v;
+
+.header {
+  background-color: v.$whiteColor;
+  font-size: v.$bodyTextSize;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: v.$fourGridColumns;
+  align-items: center;
+  width: 100%;
+  min-height: 60px;
+}
+
+.nav-logo {
+  grid-column: 2 / 3;
+  display: flex;
+  align-items: center;
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+
+  img {
+    width: 35px;
+    height: auto;
+    margin-right: 10px;
+  }
+}
+
+.nav-btn {
+  @include v.buttonStyle(v.$lightGreyColor, black, 135px, 40px);
+  cursor: pointer;
+  position: relative;
+  float: right;
+  grid-column: 3 / 4;
+  justify-self: end;
+  text-decoration: none;
+  text-align: center;
+  line-height: 40px;
+}
+
+@media (max-width: v.$tabletScreenSize) {
+  .navbar {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-btn {
+    margin-right: 20px;
+  }
+
+  .nav-logo {
+    grid-column: 1 / 2;
+    margin-left: 20px;
+  }
+}

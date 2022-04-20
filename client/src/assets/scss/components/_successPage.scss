@@ -1,0 +1,79 @@
+@use '../variables/variables' as v;
+
+.success-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: max-content 100px 1fr;
+  justify-items: center;
+}
+
+.success-header-container {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+
+  h1 {
+    margin-top: 40px;
+  }
+}
+
+.success-content {
+  display: grid;
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  justify-items: center;
+  width: 600px;
+}
+
+.success-text {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  line-height: 18px;
+}
+
+.success-check {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  width: 100px;
+  height: auto;
+  margin-top: 30px;
+}
+
+@media (max-width: v.$tabletScreenSize) {
+  .success-text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 950px) {
+  .success-content {
+    width: 410px;
+  }
+
+  .success-header-container {
+    h1 {
+      font-size: v.$mediumTextSize + 7px;
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .success-header-container {
+    text-align: center;
+    width: 90%;
+  }
+
+  .success-text {
+    margin-top: 10px;
+
+    .user-profile {
+      padding-bottom: 0px;
+    }
+  }
+
+  .success-content {
+    width: 90%;
+  }
+}
