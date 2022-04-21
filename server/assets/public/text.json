@@ -58,8 +58,8 @@
       "appFeeName": "Application fee",
       "execFeeName": "Execution fee",
       "passportBookFeeName": "Passport book fee",
-      "passportDocName": "Passport Application EXAMPLE",
-      "passportEmailSubject": "Passport Application: Test subject"
+      "passportDocName": "Passport Application SAMPLE",
+      "passportEmailSubject": "Please complete the following: Passport Application SAMPLE"
     }
   },
   "smallBusinessLoan": {
@@ -75,7 +75,7 @@
       "brandName": "MyGovernment Loan Agency Brand",
       "loan1DocName": "Loan Application SAMPLE",
       "loan2DocName": "Loan Approval Checklist SAMPLE",
-      "loanEmailSubject": "Loan Application: Test subject",
+      "loanEmailSubject": "Please complete the following: Loan Application SAMPLE, Loan Approval Checklist SAMPLE",
       "loanAmountTooltip": "< $50k: Small loan, ≥ $50k: Big loan"
     }
   },
@@ -116,9 +116,9 @@
     "envelope": {
       "fineName": "Fine amount",
       "ticketDocName": "Traffic Ticket SAMPLE",
-      "ticketEmailSubject": "Traffic Ticket: Test subject",
-      "smsDocName": "Witness Statement",
-      "smsEmailSubject": "Witness Statement: Test subject",
+      "ticketEmailSubject": "Please complete the following: Traffic Ticket SAMPLE",
+      "smsDocName": "Witness Statement SAMPLE",
+      "smsEmailSubject": "Please complete the following: Witness Statement SAMPLE",
       "smsDescription": "The vehicle was going 10mph over the speed limit in a school zone on Docu City Way, during the afternoon while children were present. The driver only slowed down to the speed limit approximately 100 feet past the speed limit sign but before the end of the school zone."
     }
   },
