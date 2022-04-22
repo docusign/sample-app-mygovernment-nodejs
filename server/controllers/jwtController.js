@@ -162,7 +162,13 @@ const logout = (req, res) => {
  * Sends back "true" if the user is logged in, false otherwise.
  */
 const isLoggedIn = (req, res) => {
-  const isLoggedIn = req.session !== null && req.session.isLoggedIn;
+  let isLoggedIn;
+  if (req.session.isLoggedIn === undefined) {
+    isLoggedIn = false;
+  } else {
+    isLoggedIn = req.session.isLoggedIn;
+  }
+
   res.status(200).send(isLoggedIn);
 };
 

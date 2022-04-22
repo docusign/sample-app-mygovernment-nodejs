@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import parse from 'html-react-parser';
 
 function ErrorPage() {
   let navigate = useNavigate();
@@ -13,7 +14,7 @@ function ErrorPage() {
         {state && state.title ? (
           <>
             <h1>{state.title}</h1>
-            {state.description}
+            {parse(state.description)}
           </>
         ) : (
           <h1>{defaultTitle}</h1>

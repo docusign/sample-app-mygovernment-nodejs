@@ -51,9 +51,10 @@ app.use((err, req, res, next) => {
     const statusCode = err.statusCode || 500;
     const errorMessage = err.message;
 
-    res
-      .status(statusCode)
-      .send({ title: errorText.docusignApiError, description: errorMessage });
+    res.status(statusCode).send({
+      title: errorText.docusignApiError,
+      description: `<b>Status code: ${statusCode}</b><br></br>${errorMessage}`,
+    });
   } else if (err && err.response && err.response.body) {
     // DocuSign API specific error, extract error code and message
     const statusCode = 500;
@@ -63,7 +64,7 @@ app.use((err, req, res, next) => {
 
     res.status(statusCode).send({
       title: errorText.docusignApiError,
-      description: `${errorText.docusignApiError}:\n${errorCode}: ${errorMessage}`,
+      description: `<b>Status code: ${statusCode}</b><br></br>${errorCode}: ${errorMessage}`,
     });
   } else {
     console.log('Unknown error occurred.');
@@ -71,7 +72,7 @@ app.use((err, req, res, next) => {
 
     res.status(500).send({
       title: errorText.docusignApiError,
-      description: errorText.unknownError,
+      description: `<b>Status code: ${statusCode}</b><br></br>${errorText.unknownError}`,
     });
   }
 });
