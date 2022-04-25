@@ -80,7 +80,7 @@ app.use((err, req, res, next) => {
 // Serve static assets if in production
 if (process.env.NODE_ENV === 'production') {
   console.log('In production');
-  app.use('/static', express.static(path.join(__dirname, 'assets', 'public')));
+  app.use('/assets', express.static(path.join(__dirname, 'assets', 'public')));
 }
 
 const port = process.env.PORT_NUMBER;

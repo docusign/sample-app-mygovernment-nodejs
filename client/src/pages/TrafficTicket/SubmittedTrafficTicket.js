@@ -7,8 +7,8 @@ import { useNavigate } from 'react-router-dom';
 function SubmittedTrafficTicket({ text }) {
   let navigate = useNavigate();
   let mountedRef = useRef(true);
-  const millieAvatarUrl = '/static/img/millie_avatar.png';
-  const codyAvatarUrl = '/static/img/cody_avatar.png';
+  const millieAvatarUrl = '/assets/img/millie_avatar.png';
+  const codyAvatarUrl = '/assets/img/cody_avatar.png';
   const witnessStatementUrl =
     '/receive-traffic-ticket/request-witness-statement';
   const mitigationClerkName = text.names.mitigationClerkName;

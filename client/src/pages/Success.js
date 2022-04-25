@@ -15,7 +15,7 @@ function Success({
   let navigate = useNavigate();
   const backLinkName = 'Back to Home';
   const continueLinkName = 'Continue';
-  const checkMarkURL = '/static/img/check.svg';
+  const checkMarkURL = '/assets/img/check.svg';
 
   return (
     <section className="content-section">

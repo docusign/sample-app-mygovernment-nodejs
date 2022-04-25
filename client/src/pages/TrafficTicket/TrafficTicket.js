@@ -7,7 +7,7 @@ import BehindTheScenes from '../../components/BehindTheScenes';
 function TrafficTicket({ text, formText, btsText, userFlowText }) {
   let navigate = useNavigate();
   const [requesting, setRequesting] = useState(false);
-  const avatarUrl = '/static/img/default_avatar.png';
+  const avatarUrl = '/assets/img/default_avatar.png';
 
   // Sends POST request to server requesting redirect URL for embedded signing
   // based on the info the user put in the form.

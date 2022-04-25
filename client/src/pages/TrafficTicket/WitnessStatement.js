@@ -9,8 +9,8 @@ function WitnessStatement({ text, formText, btsText }) {
   let navigate = useNavigate();
   const [requesting, setRequesting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const codyAvatarUrl = '/static/img/cody_avatar.png';
-  const paulaAvatarUrl = '/static/img/paula_avatar.png';
+  const codyAvatarUrl = '/assets/img/cody_avatar.png';
+  const paulaAvatarUrl = '/assets/img/paula_avatar.png';
   const policeName = text.names.policeName;
   const description = text.submitted.contestedSent.description.replaceAll(
     '{policeName}',

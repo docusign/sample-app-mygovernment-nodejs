@@ -41,7 +41,7 @@ function Home({ text, footerText }) {
         <div className="card-holder">
           <Card
             cardType="small-business-card"
-            iconUrl="/static/img/small_business.png"
+            iconUrl="/assets/img/small_business.png"
             linkTo="/apply-for-small-business-loan"
             title={text.smallBusiness}
             featureList={text.smallBusinessFeatures}
@@ -49,7 +49,7 @@ function Home({ text, footerText }) {
           />
           <Card
             cardType="traffic-ticket-card"
-            iconUrl="/static/img/traffic_ticket.png"
+            iconUrl="/assets/img/traffic_ticket.png"
             linkTo="/receive-traffic-ticket"
             title={text.trafficTicket}
             featureList={text.trafficTicketFeatures}
@@ -57,7 +57,7 @@ function Home({ text, footerText }) {
           />
           <Card
             cardType="passport-card"
-            iconUrl="/static/img/passport.png"
+            iconUrl="/assets/img/passport.png"
             linkTo="/apply-for-passport"
             title={text.passportApplication}
             featureList={text.passportFeatures}

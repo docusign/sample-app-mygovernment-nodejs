@@ -7,7 +7,7 @@ import Popup from '../components/Popup';
 function Login({ text, githubText, btsText }) {
   const [submitted, setSubmitted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const heroUrl = '/static/img/hero.png';
+  const heroUrl = '/assets/img/hero.png';
   let navigate = useNavigate();
 
   // Logs the user in, and redirects the user to a consent window if
