@@ -4,6 +4,8 @@
 
 Welcome to the MyGovernment sample app! MyGovernment is written using Node.js (server) and React (client), and shows a possible integration by a government agency with DocuSign eSignature.
 
+You can find a live instance running at https://mygovernment.sampleapps.docusign.com/.
+
 MyGovernment demonstrates the following:
 
 1. Authentication with DocuSign via [JSON Web Token (JWT) Grant](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-jsonwebtoken).
