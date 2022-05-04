@@ -88,12 +88,17 @@ const createController = async (req, res, next) => {
       throw new AppError(403, errorText.conditionalRoutingNotEnabled);
     }
 
+    // Step 1 start
     // Get the envelope definition for the envelope
     const envelopeDef = makeTrafficTicket(args.envelopeArgs);
+    // Step 1 end
 
+    // Step 2 start
     // Send the envelope and get the envelope ID
     const envelopeId = await sendEnvelope(envelopeDef, args);
+    // Step 2 end
 
+    // Step 3 start
     // Get recipient view URL for embedded signing
     const viewUrl = await getRecipientViewUrl(envelopeId, args);
 
@@ -109,6 +114,7 @@ const createController = async (req, res, next) => {
     req.session.ticketEnvelopeId = results.envelopeId;
     req.session.ticketSignerName = body.signerName;
     res.status(200).send(results.redirectUrl);
+    // Step 3 end
   }
 };
 
@@ -185,11 +191,15 @@ const smsTrafficController = async (req, res, next) => {
       throw new AppError(403, errorText.smsNotEnabled);
     }
 
+    // Step 1 start
     // Get the envelope definition for the envelope
     const envelopeDef = makeSmsEnvelope(args.envelopeArgs);
+    // Step 1 end
 
+    // Step 2 start
     // Send the envelope and get the envelope ID
     const envelopeId = await sendEnvelope(envelopeDef, args);
+    // Step 2 end
 
     // Set results
     results = { envelopeId: envelopeId };

@@ -54,6 +54,7 @@ const createController = async (req, res, next) => {
       throw new AppError(403, errorText.paymentConfigsUndefined);
     }
 
+    // Step 1 start
     // Get the workflowId and add it to envelopeArgs
     const workflowId = await getIdvWorkflowId(args);
 
@@ -63,12 +64,17 @@ const createController = async (req, res, next) => {
     }
 
     args.envelopeArgs.workflowId = workflowId;
+    // Step 1 end
 
+    // Step 2 start
     // Get the envelope definition for the envelope
     const envelopeDef = makePassportApplicationEnvelope(args.envelopeArgs);
+    // Step 2 end
 
+    // Step 3 start
     // Send the envelope and get the envelope ID
     const envelopeId = await sendEnvelope(envelopeDef, args);
+    // Step 3 end
 
     // Set results. We don't need the envelopeId for the rest of this example,
     // but you can store it for use later in other use cases.

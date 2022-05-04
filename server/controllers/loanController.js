@@ -94,16 +94,23 @@ const createController = async (req, res, next) => {
       throw new AppError(403, errorText.documentVisibilityNotEnabled);
     }
 
+    // Step 1 start
     // Create brand for envelope
     results = await createBrand(args);
     envelopeArgs.brandId = results;
+    // Step 1 end
 
+    // Step 2 start
     // Get the envelope definition for the envelope
     const envelopeDef = makeLoanApplicationEnvelope(args.envelopeArgs);
+    // Step 2 end
 
+    // Step 3 start
     // Send the envelope and get the envelope ID
     const envelopeId = await sendEnvelope(envelopeDef, args);
+    // Step 3 end
 
+    // Step 4 start
     // Get recipient view URL for embedded signing
     const viewUrl = await getRecipientViewUrl(envelopeId, args);
 
@@ -121,6 +128,7 @@ const createController = async (req, res, next) => {
 
     // Send back redirect URL for embedded signing
     res.status(200).send(results.redirectUrl);
+    // Step 4 end
   }
 };
 
