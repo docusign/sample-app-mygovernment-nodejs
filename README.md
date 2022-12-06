@@ -8,7 +8,7 @@ You can find a live instance running at https://mygovernment.sampleapps.docusign
 
 MyGovernment demonstrates the following:
 
-1. Authentication with DocuSign via [JSON Web Token (JWT) Grant](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-jsonwebtoken).
+1. Authentication with DocuSign via [JSON Web Token (JWT) Grant](https://developers.docusign.com/platform/auth/jwt/).
 2. **Apply for a small business loan:** The user can apply for a government-backed small business loan through an embedded signing session. Then, depending on how much their loan amount is, the user will receive an email addressed to a government employee named either "Sage Small Lender" or "Blaire Big Lender" to approve the loan application. Features in this use case:
    - Branding
    - Conditional recipients
@@ -32,7 +32,7 @@ Before you can run this sample app on your local machine, you must first create 
 ### Create a new integration
 
 1. If you don't already have one, create a [free developer account](https://go.docusign.com/sandbox/productshot/?elqCampaignId=16535).
-2. Log into your developer account, and navigate to [My Apps & Keys](https://admindemo.docusign.com/apps-and-keys).
+2. Log into your developer account, and navigate to [My Apps & Keys](https://admindemo.docusign.com/authenticate?goTo=apiIntegratorKey).
 3. Select **Add App and Integration Key**.
 4. Create a new integration that is configured to use **JSON Web Token (JWT) Grant**.
    You will need the **integration key** itself and its **RSA key pair**. To use this application, you must add your application's **Redirect URI** to your integration key. See our video, [**Creating an Integration Key for JWT Authentication**](https://www.youtube.com/watch?v=GgDqa7-L0yo) for a demonstration of how to create an integration key (client ID) for a user application like this example.
