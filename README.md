@@ -89,3 +89,6 @@ The traffic ticket and passport application use cases require a payment gateway 
    - In one terminal, navigate to the server folder (**`cd server`**) and run **`npm run server`**
    - In a separate terminal, navigate to the client folder (**`cd client`**) and run **`npm start`**
 5. Open a browser to **http://localhost:3000**
+
+## License information
+This repository uses the MIT License. See the [LICENSE](./LICENSE) file for more information.
