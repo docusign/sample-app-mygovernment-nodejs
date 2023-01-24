@@ -22,7 +22,7 @@
     "cookie-parser": "^1.4.6",
     "cookie-session": "^2.0.0",
     "dayjs": "^1.10.7",
-    "docusign-esign": "^5.15.0",
+    "docusign-esign": "6.0.0",
     "dotenv": "^14.3.2",
     "express": "^4.17.3",
     "helmet": "^5.0.2"
