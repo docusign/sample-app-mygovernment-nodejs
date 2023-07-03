@@ -16,18 +16,18 @@
   "author": "Emily Wang",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.25.0",
-    "body-parser": "^1.19.2",
-    "concurrently": "^7.0.0",
+    "axios": "^1.4.0",
+    "body-parser": "^1.20.2",
+    "concurrently": "^8.2.0",
     "cookie-parser": "^1.4.6",
     "cookie-session": "^2.0.0",
-    "dayjs": "^1.10.7",
-    "docusign-esign": "6.0.0",
-    "dotenv": "^14.3.2",
-    "express": "^4.17.3",
-    "helmet": "^5.0.2"
+    "dayjs": "^1.11.9",
+    "docusign-esign": "6.3.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "helmet": "^7.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.22"
   }
 }
