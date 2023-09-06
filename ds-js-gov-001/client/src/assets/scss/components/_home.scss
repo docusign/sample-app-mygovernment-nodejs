@@ -1,0 +1,148 @@
+@use '../variables/variables' as v;
+
+.home-container {
+  display: grid;
+  grid-template-columns: v.$threeGridColumns;
+  grid-template-rows: 110px 1fr min-content;
+}
+
+.home-header-container {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.card-holder {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  display: flex;
+  justify-content: space-between;
+}
+
+.small-business-card {
+  @include v.card(#579ecd);
+}
+
+.passport-card {
+  @include v.card(#d7ad4a);
+}
+
+.traffic-ticket-card {
+  @include v.card(#a44c52);
+}
+
+.image-holder {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.card-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.small-business-btn {
+  @include v.buttonStyle(#ccd6dc, black, v.$cardWidthLarge, 55px, false);
+  font-size: v.$bodyTextSize;
+}
+
+.small-business-btn:hover {
+  @include v.buttonHoverStyle(#b8c7d0);
+}
+
+.traffic-ticket-btn {
+  @include v.buttonStyle(#e1d0d2, black, v.$cardWidthLarge, 55px, false);
+  font-size: v.$bodyTextSize;
+}
+
+.traffic-ticket-btn:hover {
+  @include v.buttonHoverStyle(#d5bdc0);
+}
+
+.passport-btn {
+  @include v.buttonStyle(#efe8d7, black, v.$cardWidthLarge, 55px, false);
+  font-size: v.$bodyTextSize;
+}
+
+.passport-btn:hover {
+  @include v.buttonHoverStyle(#e7ddc4);
+}
+
+.card-title {
+  font-size: v.$mediumTextSize + 3px;
+}
+
+.card-features {
+  font-size: v.$bodyTextSize;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+@media (max-width: v.$tabletScreenSize) {
+  .home-header-container {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    width: 800px;
+  }
+
+  .home-container {
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: min-content 1fr;
+  }
+
+  .card-title {
+    font-size: v.$mediumTextSize + 1px;
+  }
+
+  .small-business-card {
+    width: v.$cardWidthMedium;
+    height: 380px;
+  }
+
+  .passport-card {
+    width: v.$cardWidthMedium;
+    height: 380px;
+  }
+
+  .traffic-ticket-card {
+    width: v.$cardWidthMedium;
+    height: 380px;
+  }
+
+  .small-business-btn {
+    width: v.$cardWidthMedium;
+  }
+
+  .traffic-ticket-btn {
+    width: v.$cardWidthMedium;
+  }
+
+  .passport-btn {
+    width: v.$cardWidthMedium;
+  }
+}
+
+@media (max-width: 870px) {
+  .home-header-container {
+    display: grid;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 100%;
+    justify-items: center;
+  }
+
+  .home-container {
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .card-holder {
+    display: grid;
+    grid-column: 1 / 2;
+  }
+}

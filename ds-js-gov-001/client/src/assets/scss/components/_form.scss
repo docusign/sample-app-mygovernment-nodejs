@@ -1,0 +1,93 @@
+@use '../variables/variables' as v;
+
+.form-holder {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  width: v.$formHolderWidth;
+  height: v.$formHolderHeight;
+  background-color: v.$whiteColor;
+  padding: v.$formPadding;
+  margin-bottom: 30px;
+  border-radius: v.$borderRadius;
+  box-shadow: v.$formDropShadow;
+
+  label {
+    font-size: 14px;
+    flex-basis: 40%;
+  }
+
+  label:after {
+    content: '*';
+    padding-left: 8px;
+    font-size: 17px;
+    color: v.$redColor;
+    line-height: v.$bodyTextSize;
+    font-family: sans-serif;
+  }
+
+  input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 7px;
+    font-family: Raleway, sans-serif;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: v.$tabletScreenSize) {
+  .form-holder {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+}
+
+@media (max-width: v.$mobileScreenSize) {
+  .form-holder {
+    width: 290px;
+    padding: 20px;
+  }
+}
+
+.form-text-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 5px;
+}
+
+.error {
+  font-size: 14px;
+  color: v.$redColor;
+  flex-basis: 60%;
+  text-align: right;
+}
+
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 30px;
+
+  h3 {
+    font-size: v.$bodyTextSize;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+
+  button {
+    cursor: pointer;
+    font-size: v.$bodyTextSize - 2;
+    color: v.$greyColor;
+    background-color: v.$whiteColor;
+    border: none;
+    text-decoration: underline;
+  }
+
+  img {
+    width: 80px;
+    height: 80px;
+  }
+}

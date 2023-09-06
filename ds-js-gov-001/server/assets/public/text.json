@@ -1,0 +1,154 @@
+{
+  "pageNotFound": {
+    "title": "404: Page not found"
+  },
+  "formLabels": {
+    "firstName": "First name:",
+    "lastName": "Last name:",
+    "officerNameLabel": "Officer name:",
+    "email": "Email:",
+    "countryCode": "Country code:",
+    "phoneNumber": "Officer phone number:",
+    "phonePlaceholder": "4155551212",
+    "requiredFieldError": "This field is required.",
+    "inputTooLongError": "Your input is too long.",
+    "invalidEmailFormatError": "Invalid email format.",
+    "invalidCountryCodeError": "Invalid country code.",
+    "invalidPhoneNumberError": "Invalid phone number.",
+    "buttonName": "Submit",
+    "submittedButtonName": "Submitting...",
+    "cancelButtonName": "Cancel",
+    "moreInfoName": "More info"
+  },
+  "header": {
+    "githubButton": "GitHub Source",
+    "githubLink": "https://github.com/docusign/sample-app-mygovernment-nodejs"
+  },
+  "footer": {
+    "copyright": "© 2023 DocuSign Inc.",
+    "title": "DocuSign: It's time to agree better",
+    "description": "DocuSign helps organizations connect and automate how they prepare, sign, act on, and manage agreements.",
+    "getFreeLinkName": "Create Developer Account",
+    "getFreeLink": "https://go.docusign.com/o/sandbox/?ga=2.70927056.1363819232.1590515244-192278368.1546193875&ECID=20890&elqCampaignId=20890&LS=NA_DEV_BOTH_BetaSite_2020-05&utm_campaign=NA_DEV_BOTH_BetaSite_2020-05&Channel=DDCUS000016968056&cName=DocuSign.com&postActivateUrl=https://developers.docusign.com/",
+    "learnMoreName": "Learn More",
+    "learnMoreLink": "https://developers.docusign.com/"
+  },
+  "home": {
+    "title": "Welcome to MyGovernment",
+    "smallBusiness": "Small Business Loan",
+    "trafficTicket": "Traffic Ticket",
+    "passportApplication": "Passport Application",
+    "smallBusinessFeatures": "<li>Branding</li><li>Conditional recipients</li><li>Document visibility</li><li>Embedded signing</li>",
+    "passportFeatures": "<li>IDV</li><li>Payment</li><li>Remote signing</li><li>Signer attachment tab</li>",
+    "trafficTicketFeatures": "<li>Certified Delivery recipients</li><li>Conditional recipients</li><li>Embedded signing</li><li>Payment</li>"
+  },
+  "login": {
+    "title": "Welcome to the MyGovernment Sample Application",
+    "description": "This app was designed to showcase a potential integration of DocuSign eSignature with a government agency. This application is open source and all of the code is located in our GitHub repository.",
+    "loginButton": "Try the App",
+    "moreInfoButton": "More Info",
+    "logoutButton": "Logout"
+  },
+  "passport": {
+    "title": "Apply for a passport",
+    "names": {
+      "userRoleName": "Traveling Citizen"
+    },
+    "envelope": {
+      "appFeeName": "Application fee",
+      "execFeeName": "Execution fee",
+      "passportBookFeeName": "Passport book fee",
+      "passportDocName": "Passport Application SAMPLE",
+      "passportEmailSubject": "Please complete the following: Passport Application SAMPLE"
+    }
+  },
+  "smallBusinessLoan": {
+    "title": "Apply for a small business loan",
+    "names": {
+      "userRoleName": "Business Owner",
+      "smallLenderName": "Sage Small Lender",
+      "bigLenderName": "Blaire Big Lender"
+    },
+    "submittedLoanTitle": "Loan application has been sent for approval",
+    "description": "Based on the your loan amount, your loan application has been sent to “{lenderName}” to approve.<br></br>Now, acting as {lenderName}, check the same email you provided previously for a copy of the loan application to approve.",
+    "envelope": {
+      "brandName": "MyGovernment Loan Agency Brand",
+      "loan1DocName": "Loan Application SAMPLE",
+      "loan2DocName": "Loan Approval Checklist SAMPLE",
+      "loanEmailSubject": "Please complete the following: Loan Application SAMPLE, Loan Approval Checklist SAMPLE",
+      "loanAmountTooltip": "< $50k: Small loan, ≥ $50k: Big loan"
+    }
+  },
+  "success": {
+    "title": "Successfully sent request",
+    "description": "Your request for signing a document has been sent to the specified email.",
+    "backLink": "Back to Home"
+  },
+  "trafficTicket": {
+    "title": "You received a traffic ticket",
+    "names": {
+      "userRoleName": "Traffic Violator",
+      "mitigationClerkName": "Millie Mitigation",
+      "contestedClerkName": "Cody Contested",
+      "policeName": "Paula Police"
+    },
+    "submitted": {
+      "paidFine": {
+        "title": "You have paid the fine",
+        "description": "You have successfully paid the fine for your traffic ticket."
+      },
+      "mitigation": {
+        "title": "Mitigation hearing request has been sent for approval",
+        "description": "Now acting as “{mitigationClerkName}”, check your email that you previously provided for the mitigation hearing request to view to approve."
+      },
+      "contestedSuccess": {
+        "title": "Contested hearing request has been approved",
+        "description": "Now acting as “{contestedClerkName}”, check your email that you previously provided for the contested hearing request to view to approve.<br></br>Then continue to the next step to request the police officer who issued the ticket to submit their witness statement."
+      },
+      "contestedForm": {
+        "title": "Request witness statement"
+      },
+      "contestedSent": {
+        "title": "Witness statement request has been sent",
+        "description": "Now acting as “{policeName}”, check the phone number that you previously provided for the witness statement to fill out."
+      }
+    },
+    "envelope": {
+      "fineName": "Fine amount",
+      "ticketDocName": "Traffic Ticket SAMPLE",
+      "ticketEmailSubject": "Please complete the following: Traffic Ticket SAMPLE",
+      "smsDocName": "Witness Statement SAMPLE",
+      "smsEmailSubject": "Please complete the following: Witness Statement SAMPLE",
+      "smsDescription": "The vehicle was going 10mph over the speed limit in a school zone on Docu City Way, during the afternoon while children were present. The driver only slowed down to the speed limit approximately 100 feet past the speed limit sign but before the end of the school zone."
+    }
+  },
+  "behindTheScenes": {
+    "title": "See behind the scenes",
+    "login": {
+      "title": "Login code flow",
+      "description": "Selecting <b>Try the App</b> logs the user in using <a href=\"https://developers.docusign.com/platform/auth/jwt/\" target=\"_blank\" rel=\"noopener noreferrer\">JSON Web Token (JWT)</a> Grant authentication, which is one of the OAuth 2.0 flows that DocuSign APIs support. For more information about which OAuth flow your application should use, see the <a href=\"https://developers.docusign.com/platform/auth/choose/\" target=\"_blank\" rel=\"noopener noreferrer\">Developer Center</a>.<br></br><b>Note:</b> Every user of this sample application is logged in using the same account to simplify hosting. However, if you are running this application locally, you must use your own <a href=\"https://go.docusign.com/o/sandbox/?ga=2.70927056.1363819232.1590515244-192278368.1546193875&ECID=20890&elqCampaignId=20890&LS=NA_DEV_BOTH_BetaSite_2020-05&utm_campaign=NA_DEV_BOTH_BetaSite_2020-05&Channel=DDCUS000016968056&cName=DocuSign.com&postActivateUrl=https://developers.docusign.com/\" target=\"_blank\" rel=\"noopener noreferrer\">developer account</a>.<h2>Code flow:</h2>See the <a href=\"https://github.com/docusign/sample-app-mygovernment-nodejs/blob/master/server/controllers/jwtController.js\" target=\"_blank\" rel=\"noopener noreferrer\">source code</a> for this flow.<h3>Step 1</h3>If the user hasn't yet provided consent for the application to impersonate them, create the consent URI and have the user provide consent; then <a href=\"https://developers.docusign.com/platform/auth/jwt/jwt-get-token/\" target=\"_blank\" rel=\"noopener noreferrer\">obtain the JWT token</a> with the scopes that the application requires.<h3>Step 2</h3>Using the JWT, obtain and store the access token that will be used to make future API calls.<h3>Step 3</h3>Using the access token, use the <a href=\"https://developers.docusign.com/platform/auth/reference/user-info/\" target=\"_blank\" rel=\"noopener noreferrer\">/oauth/userinfo API endpoint</a> to get and store the user's base URI and account ID, which are also needed to make API calls."
+    },
+    "passport": {
+      "description": "<h2>This sample features:</h2><ul><li><a href=\"https://developers.docusign.com/docs/esign-rest-api/how-to/id-verification/\" target=\"_blank\" rel=\"noopener noreferrer\">IDV</a></li><li><a href=\"https://developers.docusign.com/docs/esign-rest-api/how-to/request-a-payment/\" target=\"_blank\" rel=\"noopener noreferrer\">Payment</a></li><li><a href=\"https://developers.docusign.com/docs/esign-rest-api/how-to/request-signature-email-remote/\" target=\"_blank\" rel=\"noopener noreferrer\">Remote signing</a></li><li><a href=\"https://developers.docusign.com/docs/esign-rest-api/esign101/concepts/documents/attachments/\" target=\"_blank\" rel=\"noopener noreferrer\">Signer attachment tab</a></li></ul><h2>Code flow:</h2>See the <a href=\"https://github.com/docusign/sample-app-mygovernment-nodejs/blob/master/server/controllers/passportController.js\" target=\"_blank\" rel=\"noopener noreferrer\">controller</a> and <a href=\"https://github.com/docusign/sample-app-mygovernment-nodejs/blob/master/server/docusign/envelopes/makePassportApplication.js\" target=\"_blank\" rel=\"noopener noreferrer\">envelope</a> source code.<h3>Step 1</h3>After the form is submitted, call the <a href=\"https://developers.docusign.com/docs/esign-rest-api/reference/accounts/identityverifications/\" target=\"_blank\" rel=\"noopener noreferrer\">IdentityVerifications Resource</a> method to get the workflows available to the user's account. From those workflows, find the workflow ID associated with ID Verification. If it is not found, then the user does not have this feature enabled on their account.<h3>Step 2</h3>Create an envelope definition with all of the envelope data, including the form information, tabs for form fields, document to sign, and the signer recipient.<br></br>Place different types of tabs on the document as part of the <b>Signer</b> element. The tab elements are positioned using <a href=\"https://developers.docusign.com/docs/esign-rest-api/esign101/concepts/tabs/auto-place/\" target=\"_blank\" rel=\"noopener noreferrer\">auto-place (anchor tagging)</a> on the <b>Document</b>. <br></br>Set the envelope status to <i>“sent”</i> in the envelope definition so that the envelope is sent for signing.<h3>Step 3</h3>Using the <a href=\"https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopes/create/\" target=\"_blank\" rel=\"noopener noreferrer\">Envelopes:create</a> API method, create and immediately send the envelope via remote signing with the envelope definition made from the previous step. The recipient receives an email that includes instructions for how to proceed with the IDV process, and eventually signs the document."
+    },
+    "smallBusinessLoan": {
+      "description": "<h2>This sample features:</h2><ul><li><a href=\"https://developers.docusign.com/docs/esign-rest-api/how-to/create-brand/\" target=\"_blank\" rel=\"noopener noreferrer\">Branding</a></li><li><a href=\"https://developers.docusign.com/docs/esign-rest-api/how-to/use-conditional-recipients/\" target=\"_blank\" rel=\"noopener noreferrer\">Conditional recipients</a></li><li>Document visibility</li><li><a href=\"https://developers.docusign.com/docs/esign-rest-api/how-to/request-signature-in-app-embedded/\" target=\"_blank\" rel=\"noopener noreferrer\">Embedded signing</a></li></ul><h2>Code flow:</h2>See the <a href=\"https://github.com/docusign/sample-app-mygovernment-nodejs/blob/master/server/controllers/loanController.js\" target=\"_blank\" rel=\"noopener noreferrer\">controller</a> and <a href=\"https://github.com/docusign/sample-app-mygovernment-nodejs/blob/master/server/docusign/envelopes/makeLoanApplication.js\" target=\"_blank\" rel=\"noopener noreferrer\">envelope</a> source code.<h3>Step 1</h3>After the form is submitted, call the <a href=\"https://developers.docusign.com/docs/esign-rest-api/reference/accounts/accountbrands/list/\" target=\"_blank\" rel=\"noopener noreferrer\">AccountBrands:list</a> method on the account to check if the brand you want to create already exists. If it does, find the corresponding brand ID. If not, call the <a href=\"https://developers.docusign.com/docs/esign-rest-api/reference/accounts/accountbrands/create/\" target=\"_blank\" rel=\"noopener noreferrer\">AccountBrands:create</a> method to create a new brand. The brand ID is then stored for the next step.<h3>Step 2</h3>Create an envelope definition with all of the envelope data, including the form information, brand data, tabs for form fields, documents to sign, and recipients.<br></br>Place different types of tabs on the documents as part of the <b>Signer</b>s. The tab elements are positioned using <i>x/y</i> coordinates on the <b>Document</b>s. <br></br>Since the first signer is using embedded signing, you must also set the <i>clientUserId</i> property for that signer recipient.<br></br>Also define a <b>RecipientGroup</b> of Signer recipient options, which contains two possible signers that will represent a government employee who needs to review, initial, and complete an additional document inside the envelope to approve and complete the envelope. These are the <a href=\"https://developers.docusign.com/docs/esign-rest-api/esign101/concepts/recipients/conditional-recipients/\" target=\"_blank\" rel=\"noopener noreferrer\">conditional recipients</a>. Use a <b>ConditionalRecipientRule</b> to determine when each recipient option receives the envelope, and use a <b>Workflow</b> object to determine the action. In this case, the action is to <i>\"pause_before\"</i> the envelope is sent to the second recipient.<br></br>The <i>\"loanAmount\"</i> Number tab is the <a href=\"https://developers.docusign.com/docs/esign-rest-api/esign101/concepts/tabs/conditional-fields/\" target=\"_blank\" rel=\"noopener noreferrer\">conditional field</a> that determines which conditional recipient from above to send the envelope to next. Depending on if the first signer/loan applicant chooses a loan amount above or below a certain amount, the envelope is redirected to the correct \"government employee\" accordingly. <br></br>The app also uses document visibility to specify which documents each signer can see. Setting <i>enforceSignerVisibility</i> to <i>true</i> in the envelope definition allows signers to view only those documents on which they have tabs. <br></br>Set the envelope status to <i>\"sent\"</i> in the envelope definition so that the envelope is sent for signing.<h3>Step 3</h3>Using the <a href=\"https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopes/create/\" target=\"_blank\" rel=\"noopener noreferrer\">Envelopes:create</a> API method, create and immediately send the envelope with the envelope definition made from the previous step. The returned <i>\"envelopeId\"</i> is then stored for use in the next step.<h3>Step 4</h3>To enable embedded signing within the app, call the <a href=\"https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopeviews/createrecipient/\" target=\"_blank\" rel=\"noopener noreferrer\">EnvelopeViews:createRecipient</a> API method with the <i>envelopeId</i> from the previous step and a return URL to this application. This method then generates a signing URL for the signer, to which the user is redirected. <h3>Step 5</h3>After the user completes signing the envelope in the embedded signing session, the envelope is redirected to the second signer based on the conditions described in step 2."
+    },
+    "trafficTicket": {
+      "description": "<h2>This sample features:</h2><ul><li><a href=\"https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/enveloperecipients/#certified-delivery-recipient\" target=\"_blank\" rel=\"noopener noreferrer\">Certified Delivery recipients</a></li><li><a href=\"https://developers.docusign.com/docs/esign-rest-api/how-to/use-conditional-recipients/\" target=\"_blank\" rel=\"noopener noreferrer\">Conditional recipients</a></li><li><a href=\"https://developers.docusign.com/docs/esign-rest-api/how-to/request-signature-in-app-embedded/\" target=\"_blank\" rel=\"noopener noreferrer\">Embedded signing</a></li><li><a href=\"https://developers.docusign.com/docs/esign-rest-api/how-to/request-a-payment/\" target=\"_blank\" rel=\"noopener noreferrer\">Payment</a></li></ul><h2>Code flow:</h2>See the <a href=\"https://github.com/docusign/sample-app-mygovernment-nodejs/blob/master/server/controllers/trafficController.js\" target=\"_blank\" rel=\"noopener noreferrer\">controller</a> and <a href=\"https://github.com/docusign/sample-app-mygovernment-nodejs/blob/master/server/docusign/envelopes/makeTrafficTicket.js\" target=\"_blank\" rel=\"noopener noreferrer\">envelope</a> source code.<h3>Step 1</h3>When the form is submitted, create an <b>envelope definition</b> with all of the envelope data including the form information, tabs for form fields, document to sign, and recipients.<br></br>Place different types of tabs on the documents as part of the <b>Signer</b> element. The tab elements are positioned using <i>x/y</i> coordinates on the <b>Document</b>. <br></br>Since the signer is using embedded signing, you must also set the <i>clientUserId</i> property for the signer recipient.<br></br>Also define a <b>RecipientGroup</b> of <b>CertifiedDelivery</b> recipient options, which contains two possible recipients that will represent a court clerk who needs to view the signed envelope in order to complete the envelope. These are the <a href=\"https://developers.docusign.com/docs/esign-rest-api/esign101/concepts/recipients/conditional-recipients/\" target=\"_blank\" rel=\"noopener noreferrer\">conditional recipients</a>. Use a <b>ConditionalRecipientRule</b> to determine when each recipient option receives the envelope, and use a <b>Workflow</b> object to determine the action. In this case, the action is to <i>\"pause_before\"</i> the envelope is sent to the second recipient.<br></br>One of the <b>RadioGroup</b> tabs (with the group name \"ticketOption\") is a <a href=\"https://developers.docusign.com/docs/esign-rest-api/esign101/concepts/tabs/conditional-fields/\" target=\"_blank\" rel=\"noopener noreferrer\">conditional field</a> that enables the user either to pay or select which conditional recipient from above to send the envelope to next. There are three possible choices:<ol><li>Signer selects <b>Pay</b>, which would then display the <b>Payment</b> tab with the value of the fine the signer must pay. Once the user signs the document, DocuSign then collects the payment.</li><li>Signer selects <b>Mitigation</b>, which sets the second recipient of the envelope to be the <b>CertifiedDelivery</b> recipient named \"Millie Mitigation.\"</li><li>Signer selects <b>Contested</b>, which sets the second recipient of the envelope to be the <b>CertifiedDelivery</b> recipient named \"Cody Contested.\"</li></ol>Set the envelope status to <i>\"sent\"</i> in the envelope definition so that the envelope is sent for signing.<h3>Step 2</h3>Using the <a href=\"https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopes/create/\" target=\"_blank\" rel=\"noopener noreferrer\">Envelopes:create</a> API method, create and immediately send the envelope with the envelope definition made from the previous step. The returned <i>envelopeId</i> is then stored for use in the next step.<h3>Step 3</h3>To enable embedded signing within the app, call the <a href=\"https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopeviews/createrecipient/\" target=\"_blank\" rel=\"noopener noreferrer\">EnvelopeViews:createRecipient</a> API method with the <i>envelopeId</i> from the previous step and a return URL to this application. This method then generates a signing URL for the signer, to which the user is redirected. <h3>Step 4</h3>After the user completes signing the envelope in the embedded signing session, the envelope is redirected to the second recipient based on the conditions described in step 1."
+    },
+    "witnessStatement": {
+      "description": "<h2>This sample features:</h2><ul><li><a href=\"https://developers.docusign.com/docs/esign-rest-api/how-to/request-signature-sms/\" target=\"_blank\" rel=\"noopener noreferrer\">SMS delivery</a></li><li><a href=\"https://developers.docusign.com/docs/esign-rest-api/esign101/concepts/documents/attachments/\" target=\"_blank\" rel=\"noopener noreferrer\">Signer attachment tab</a></li></ul><h2>Code flow:</h2>See the <a href=\"https://github.com/docusign/sample-app-mygovernment-nodejs/blob/master/server/controllers/trafficController.js\" target=\"_blank\" rel=\"noopener noreferrer\">controller</a> and <a href=\"https://github.com/docusign/sample-app-mygovernment-nodejs/blob/master/server/docusign/envelopes/makeSmsEnvelope.js\" target=\"_blank\" rel=\"noopener noreferrer\">envelope</a> source code.<h3>Step 1</h3>When the form is submitted, create an envelope definition with all of the envelope data including the form information, tabs for form fields, document to sign, and recipient.<br></br>Place different types of tabs on the documents as part of the <b>Signer</b> element. The tab elements are positioned using <i>x/y</i> coordinates on the <b>Document</b>. <br></br>Since the signer will be signing via SMS, also add an additional <b>phoneNumber</b> tab to the Signer element that contains the country code and phone number that the user inputted into the form. <br></br>Set the envelope status to <i>\"sent\"</i> in the envelope definition so that the envelope is sent for signing.<h3>Step 2</h3>We proceed to create and immediately send the envelope with the envelope definition we made from the previous step by using the <a href=\"https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopes/create/\" target=\"_blank\" rel=\"noopener noreferrer\">Envelopes:create</a> API method. The user will then receive a text message with the envelope to sign."
+    }
+  },
+  "userFlowInfo": {
+    "smallBusinessLoan": {
+      "title": "User flow walk-through",
+      "description": "To give you a more extensive look at the features that the DocuSign eSignature API has to offer, this example involves multiple user roles in which you will need to act.<h2>First user role: Small business owner</h2>Acting as a small business owner looking to take out a loan from the government, enter your information into the form and submit it.<br></br>This brings you into an embedded signing session where you can fill out the loan application and determine whether you want to apply for a small loan (< $50k) or a big loan (≥ $50k). After you finish the application, you will be redirected back to this app.<br></br>If you apply for a small loan, your application will be directed to a government employee named “Sage Small Lender” to approve. Otherwise, your application will be directed to another employee named “Blaire Big Lender.” <h2>Second user role: Government employee</h2>Acting as the designated government employee, check the same email you provided in the previous step for the loan application to approve. Note again that the DocuSign envelope will be addressed to either “Sage Small Lender” or “Blaire Big Lender.”"
+    },
+    "trafficTicket": {
+      "title": "User flow walk-through",
+      "description": "To give you a more extensive look at the features that the DocuSign eSignature API has to offer, this example involves multiple user roles in which you will need to act.<h2>First user role: Traffic violator</h2>Acting as a citizen who has received a traffic ticket, enter your information into the form and submit it.<br></br>This brings you into an embedded signing session where you can add information to the traffic ticket and determine what you want to do with it. After you submit the ticket, you will be redirected back to this app.<br></br>If you choose to <b>pay the fine</b>, then DocuSign will prompt you for payment information when you finish signing the envelope.<br></br>If you <b>request a mitigation hearing</b>, then your ticket will be directed to a court clerk named “Millie Mitigation” to view for approval.<br></br>If you <b>request a contested hearing</b>, then your ticket will be directed to a court clerk named “Cody Contested” to view for approval, and for them to request the witness statement of the police officer who issued the original ticket.<h2>Second user role: Court clerk</h2>Acting as the designated court clerk, check the same email address you provided in the previous step for the traffic ticket to approve. Since the court clerk is set as a Certified Delivery recipient, you only need to view the envelope in order to complete it. Note again that the DocuSign envelope will be addressed to either “Millie Mitigation” or “Cody Contested.”<br></br>If you are acting as “Cody Contested,” then, after viewing the envelope, you can return to this app and request the witness statement from the police officer who issued the ticket, “Paula Police.” Input your phone number as Paula Police’s phone number in the form and submit it.<h2>Third potential user role: Police officer</h2>Acting as “Paula Police,” check the phone with the phone number that you provided in the previous step for a text with the witness statement to fill out."
+    }
+  }
+}

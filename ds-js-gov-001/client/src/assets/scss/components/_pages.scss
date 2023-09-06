@@ -1,0 +1,92 @@
+@use '../variables/variables' as v;
+
+.content-section {
+  min-height: 88vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: v.$fourGridColumns;
+  grid-template-rows: 110px 1fr;
+}
+
+.header-container {
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+}
+
+h1 {
+  font-size: v.$bigTextSize;
+  margin-top: 50px;
+}
+
+.button-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.black-button {
+  @include v.buttonStyle(black, white, 45%);
+}
+
+.black-button:hover {
+  @include v.buttonHoverStyle(#2b2b2b);
+}
+
+.black-button:disabled {
+  @include v.buttonStyle(v.$greyColor, white, 45%);
+  cursor: default;
+}
+
+.grey-button {
+  @include v.buttonStyle(v.$lightGreyColor, black, 45%);
+}
+
+.grey-button:hover {
+  @include v.buttonHoverStyle(#e6e6e6);
+}
+
+.grey-button-fixed-size {
+  @include v.buttonStyle(v.$lightGreyColor, black, 200px);
+  margin-top: 30px;
+}
+
+.grey-button-fixed-size:hover {
+  @include v.buttonHoverStyle(#e6e6e6);
+}
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: v.$tabletScreenSize) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr;
+    justify-items: center;
+  }
+
+  .header-container {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  h1 {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: v.$mobileScreenSize) {
+  .container {
+    grid-template-rows: 70px 1fr;
+  }
+
+  h1 {
+    font-size: v.$bigTextSize - 10;
+    margin-top: 30px;
+  }
+}

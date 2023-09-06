@@ -1,0 +1,61 @@
+@use '../variables/variables' as v;
+
+.copyright {
+  text-align: center;
+}
+
+.footer-container {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 100px;
+
+  h1 {
+    font-size: v.$mediumTextSize + 7;
+  }
+}
+
+.footer-btn {
+  @include v.buttonStyle(v.$whiteColor, black, 210px, 40px);
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  line-height: 40px;
+}
+
+.footer-btn-container {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+@media (max-width: 870px) {
+  .footer-container {
+    grid-column: 1 / 2;
+    text-align: center;
+  }
+
+  .footer-btn {
+    margin-bottom: 15px;
+  }
+
+  .footer-btn-container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: v.$mobileScreenSize) {
+  .footer-container {
+    width: 90%;
+
+    h1 {
+      font-size: v.$mediumTextSize;
+    }
+  }
+}

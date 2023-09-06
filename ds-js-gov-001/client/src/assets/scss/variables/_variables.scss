@@ -1,0 +1,99 @@
+// Colors
+$bgColor: #f6f6f6;
+$greyColor: #787878;
+$lightGreyColor: #eeeeee;
+$redColor: #cc0f0f;
+$whiteColor: white;
+
+// Drop shadows
+$formDropShadow: 0px 5px 20px rgba(0, 0, 0, 0.06);
+$buttonDropShadow: 3px 3px 3px rgba(0, 0, 0, 0.11);
+
+// Text sizes
+$bodyTextSize: 14px;
+$mediumTextSize: 18px;
+$bigTextSize: 34px;
+
+// Form sizes
+$formHolderWidth: 460px;
+$formHolderHeight: 462px;
+$formPadding: 35px;
+
+// Behind the scenes sizes
+$btsHolderWidth: 450px;
+$btsMarginLeft: 40px;
+
+// Card sizes
+$cardWidthLarge: 275px;
+$cardWidthMedium: 210px;
+
+// Other sizes
+$borderRadius: 2px;
+
+// Formatting
+$fourGridColumns: 1fr ($formHolderWidth + 2 * $formPadding)
+  ($btsHolderWidth + $btsMarginLeft) 1fr;
+$threeGridColumns: 1fr
+  ($formHolderWidth + 2 * $formPadding + $btsHolderWidth + $btsMarginLeft) 1fr;
+
+// Responsive screen sizes
+$mobileScreenSize: 580px;
+$tabletScreenSize: 1100px;
+
+// Button
+@mixin buttonStyle(
+  $bgColor,
+  $textColor,
+  $width,
+  $height: 45px,
+  $includeShadow: true
+) {
+  width: $width;
+  height: $height;
+  font-family: Raleway, sans-serif;
+  font-weight: 600;
+  color: $textColor;
+  background-color: $bgColor;
+  border: none;
+  border-radius: $borderRadius;
+  @if ($includeShadow) {
+    box-shadow: $buttonDropShadow;
+  }
+  transition: background-color 0.4s;
+}
+
+@mixin buttonHoverStyle($bgColor) {
+  background-color: $bgColor;
+  cursor: pointer;
+}
+
+@mixin card($borderColor) {
+  width: $cardWidthLarge;
+  height: 420px;
+  padding: 20px;
+  background-color: $whiteColor;
+  box-shadow: $formDropShadow;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-bottom: 5px solid $borderColor;
+  border-radius: $borderRadius;
+  margin-bottom: 30px;
+
+  ul {
+    margin-top: 5px;
+    font-size: $bodyTextSize - 1px;
+    line-height: 18px;
+    padding-left: 25px;
+  }
+}
+
+@mixin cardHoverStyle {
+  content: '';
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  height: 3px;
+  border-radius: 2px;
+}

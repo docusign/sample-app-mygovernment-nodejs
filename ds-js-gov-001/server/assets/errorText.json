@@ -1,0 +1,12 @@
+{
+  "api": {
+    "certifiedDeliveryNotEnabled": "Send to CertifiedDelivery recipients is not enabled on your account. Please refer to the README to enable this setting.",
+    "conditionalRoutingNotEnabled": "Conditional routing is not enabled on your account. Please refer to the README to enable this setting.",
+    "documentVisibilityNotEnabled": "Document Visibility is not enabled on your account. Please refer to the README to enable this setting.",
+    "docusignApiError": "DocuSign API error occurred",
+    "idvNotEnabled": "IDV is not enabled on your account. Please contact Support to enable this feature.",
+    "paymentConfigsUndefined": "Payment gateway configurations missing. Please refer to the README to set up a payment gateway and update the .env file accordingly.",
+    "smsNotEnabled": "SMS Delivery is not enabled on your account. Please contact Support to enable this feature.",
+    "unknownError": "An unknown error occurred. Check the server console for the stack trace."
+  }
+}

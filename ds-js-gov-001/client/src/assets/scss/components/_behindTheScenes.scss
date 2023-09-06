@@ -1,0 +1,66 @@
+@use '../variables/variables' as v;
+
+.bts-holder {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  margin-left: v.$btsMarginLeft;
+  width: v.$btsHolderWidth;
+
+  h1 {
+    font-size: v.$mediumTextSize + 3px;
+    margin-top: 0px;
+    transition: color 0.2s;
+  }
+
+  h1:hover {
+    color: rgb(98, 98, 98);
+    text-decoration: underline;
+  }
+}
+
+.bts-header {
+  cursor: pointer;
+  display: flex;
+  height: 30px;
+
+  img {
+    width: 19px;
+    margin-bottom: 5px;
+    margin-right: 8px;
+  }
+}
+
+.bts-desc {
+  height: v.$formHolderHeight + 2 * v.$formPadding - 30px;
+  overflow-y: auto;
+  padding-right: 20px;
+
+  h2 {
+    font-size: v.$mediumTextSize;
+    margin-bottom: 8px;
+  }
+
+  h3 {
+    font-size: v.$bodyTextSize + 2px;
+    margin-bottom: 8px;
+  }
+
+  i {
+    font-family: 'Roboto Mono', Courier, monospace;
+    font-style: normal;
+    // font-weight: 400;
+  }
+}
+
+@media (max-width: v.$tabletScreenSize) {
+  .bts-holder {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+}
+
+@media (max-width: v.$mobileScreenSize) {
+  .bts-holder {
+    width: 290px;
+  }
+}
