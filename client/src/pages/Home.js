@@ -14,7 +14,7 @@ function Home({ text, footerText }) {
 
   // If the previous screen was the login screen, then
   // make sure the server has the necessary user information
-  // stored for making DocuSign API calls.
+  // stored for making Docusign API calls.
   async function getUserInfo() {
     try {
       let response = await axios.get('/auth/login');

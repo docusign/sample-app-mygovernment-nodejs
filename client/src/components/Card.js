@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Card({ cardType, buttonType, iconUrl, title, featureList, linkTo }) {
   const buttonName = 'Get Started';
-  const featureListTitle = 'DocuSign features:';
+  const featureListTitle = 'Docusign features:';
 
   return (
     <div className={cardType}>

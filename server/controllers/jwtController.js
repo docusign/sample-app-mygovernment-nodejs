@@ -51,7 +51,7 @@ const getToken = async (req) => {
 /**
  * Checks to see that the current access token is still valid, and if not,
  * updates the token.
- * Must be called before every DocuSign API call.
+ * Must be called before every Docusign API call.
  */
 const checkToken = async (req) => {
   try {
