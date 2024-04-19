@@ -2,13 +2,13 @@
 
 ## Introduction
 
-Welcome to the MyGovernment sample app! MyGovernment is written using Node.js (server) and React (client), and shows a possible integration by a government agency with DocuSign eSignature.
+Welcome to the MyGovernment sample app! MyGovernment is written using Node.js (server) and React (client), and shows a possible integration by a government agency with Docusign eSignature.
 
 You can find a live instance running at https://mygovernment.sampleapps.docusign.com/.
 
 MyGovernment demonstrates the following:
 
-1. Authentication with DocuSign via [JSON Web Token (JWT) Grant](https://developers.docusign.com/platform/auth/jwt/).
+1. Authentication with Docusign via [JSON Web Token (JWT) Grant](https://developers.docusign.com/platform/auth/jwt/).
 2. **Apply for a small business loan:** The user can apply for a government-backed small business loan through an embedded signing session. Then, depending on how much their loan amount is, the user will receive an email addressed to a government employee named either "Sage Small Lender" or "Blaire Big Lender" to approve the loan application. Features in this use case:
    - Branding
    - Conditional recipients
@@ -27,7 +27,7 @@ MyGovernment demonstrates the following:
 
 ## Configuring your integration
 
-Before you can run this sample app on your local machine, you must first create a new integration with a DocuSign developer account.
+Before you can run this sample app on your local machine, you must first create a new integration with a Docusign developer account.
 
 ### Create a new integration
 
@@ -45,20 +45,20 @@ Before you can run this sample app on your local machine, you must first create 
 
 ### Prerequisites
 
-- A free DocuSign developer account.
+- A free Docusign developer account.
 - Integration key and corresponding RSA key pair from the integration you created above.
 - [Node.js](https://nodejs.org/) v14+
 
-### DocuSign account settings
+### Docusign account settings
 
 The following must be enabled on your developer account in order to run all of the examples:
 
 - **Payment**: You must have a Payment gateway set up, see the [Payments](#configure-a-payment-gateway) section below for further instructions.
-- **SMS delivery**: Follow the instructions in the [DocuSign eSignature Admin Guide](https://support.docusign.com/guides/ndse-admin-guide-sending-settings) under the **Fields and Properties** section. Make sure "Allow SMS delivery to recipients" is checked.
+- **SMS delivery**: Follow the instructions in the [Docusign eSignature Admin Guide](https://support.docusign.com/guides/ndse-admin-guide-sending-settings) under the **Fields and Properties** section. Make sure "Allow SMS delivery to recipients" is checked.
 - **Conditional routing**: Follow the instructions in the [Introduction to Conditional Routing](https://support.docusign.com/en/guides/ndse-user-guide-intro-to-conditional-routing) under the **Getting started with conditional routing** section. Make sure "Enable conditional routing" is checked.
-- **CertifiedDelivery recipients**: Follow the instructions on this [DocuSign eSignature Admin Guide](https://support.docusign.com/guides/ndse-admin-guide-sending-settings) under the **Recipient Roles** section. Make sure "Enable needs to view role" is checked.
-- **Document visibility**: Follow the instructions on this [DocuSign eSignature Admin Guide](https://support.docusign.com/guides/ndse-admin-guide-sending-settings) under the **Fields and Properties** section. Set your settings to "Must sign to view, unless sender," and make sure "Allow sender to specify document visibility" is checked.
-- **IDV**: Follow the instructions in the [DocuSign Identify - ID Verification Q&A](https://support.docusign.com/en/articles/Tech-Readiness-DocuSign-Identify-ID-Verification#How_to_add_ID_Verification_on_an_account) to enable IDV on your account.
+- **CertifiedDelivery recipients**: Follow the instructions on this [Docusign eSignature Admin Guide](https://support.docusign.com/guides/ndse-admin-guide-sending-settings) under the **Recipient Roles** section. Make sure "Enable needs to view role" is checked.
+- **Document visibility**: Follow the instructions on this [Docusign eSignature Admin Guide](https://support.docusign.com/guides/ndse-admin-guide-sending-settings) under the **Fields and Properties** section. Set your settings to "Must sign to view, unless sender," and make sure "Allow sender to specify document visibility" is checked.
+- **IDV**: Follow the instructions in the [Docusign Identify - ID Verification Q&A](https://support.docusign.com/en/articles/Tech-Readiness-DocuSign-Identify-ID-Verification#How_to_add_ID_Verification_on_an_account) to enable IDV on your account.
 
 ### Install dependencies locally
 
@@ -77,7 +77,7 @@ The following must be enabled on your developer account in order to run all of t
 The traffic ticket and passport application use cases require a payment gateway to be active on your developer account. For these examples, the Stripe gateway service is used. Follow the instructions below to set up payments on your account.
 
 1. Select the Stripe button on the [**Payments**](https://admindemo.docusign.com/authenticate?goTo=payments) page in your developer account.
-2. For development, you can skip the Stripe account application by using the **Skip this account form** link at the top of the page. An enabled Stripe payment gateway is now associated with your DocuSign developer account and is shown under **Payment Gateway**.
+2. For development, you can skip the Stripe account application by using the **Skip this account form** link at the top of the page. An enabled Stripe payment gateway is now associated with your Docusign developer account and is shown under **Payment Gateway**.
 3. Save the **Gateway Account ID** GUID to your .env file and update the other relevant settings under **Payment configuration**.
 
 ## Running MyGovernment

@@ -56,7 +56,7 @@ app.use((err, req, res, next) => {
       description: `<b>Status code: ${statusCode}</b><br></br>${errorMessage}`,
     });
   } else if (err && err.response && err.response.body) {
-    // DocuSign API specific error, extract error code and message
+    // Docusign API specific error, extract error code and message
     const statusCode = 500;
     const errorBody = err && err.response && err.response.body;
     const errorCode = errorBody && errorBody.errorCode;
