@@ -25,7 +25,7 @@ function SubmittedLoan({ text }) {
   // and sets the lender name accordingly.
   async function getLoanAmount() {
     try {
-      let response = await axios.get('/loanApplication/submitted');
+      let response = await axios.get('/api/loanApplication/submitted');
 
       // Only set states if the component is mounted, otherwise return null.
       if (!mountedRef.current) return null;

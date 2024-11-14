@@ -14,7 +14,7 @@ const oAuth = eSignSdk.ApiClient.OAuth;
 const restApi = eSignSdk.ApiClient.RestApi;
 
 // Constants
-const rsaKey = fs.readFileSync(path.resolve(__dirname, '../../private.key'));
+const rsaKey = fs.readFileSync(path.resolve(__dirname, '../private.key'));
 const jwtLifeSec = 60 * 60; // Request lifetime of JWT token is 60 minutes
 const scopes = 'signature';
 
@@ -123,6 +123,7 @@ const getUserInfo = async (req) => {
  * redirected to a login screen.
  */
 const login = async (req, res, next) => {
+  console.log("Login route reached");
   try {
     // As long as the user has attempted to login before, they have either successfully
     // logged in or was redirected to the consent URL and then redirected back to the

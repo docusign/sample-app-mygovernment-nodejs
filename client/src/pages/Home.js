@@ -17,7 +17,7 @@ function Home({ text, footerText }) {
   // stored for making Docusign API calls.
   async function getUserInfo() {
     try {
-      let response = await axios.get('/auth/login');
+      let response = await axios.get(`${process.env.REACT_APP_API_URL}/api/auth/login`);
 
       // If the user revoked consent after logging in, check to make
       // sure they still have consent

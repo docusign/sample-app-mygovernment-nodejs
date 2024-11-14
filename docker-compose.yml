@@ -1,0 +1,40 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: my-backend
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./server/.env
+    volumes:
+      - ./server:/app
+      - ./server/assets/public:/app/assets/public:ro 
+    networks:
+      - mynetwork
+
+  frontend:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+      args:
+        REACT_APP_API_URL: "http://localhost:5000" 
+    container_name: my-frontend
+    ports:
+      - "3000:80"
+    environment:
+      - REACT_APP_API_URL=http://localhost:5000
+      - REACT_APP_NODE_ENV=development
+    depends_on:
+      - backend
+    env_file:
+      - ./client/.env
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge

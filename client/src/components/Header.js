@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 function Header({ text }) {
   const appName = 'MyGovernment';
-  const logoUrl = '/assets/img/logo.svg';
+  const logoUrl = 'http://localhost:5000/assets/img/logo.svg';
   let location = useLocation();
 
   return (
