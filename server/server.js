@@ -1,6 +1,7 @@
 require('dotenv').config({ path: `${process.env.PWD}/.env` });
 const path = require('path');
 const express = require('express');
+const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const cookieSession = require('cookie-session');
 const bodyParser = require('body-parser');
@@ -16,6 +17,11 @@ const trafficRouter = require('./routes/trafficRouter');
 
 // Max session age
 const maxSessionAge = 1000 * 60 * 60 * 24 * 1; // One day
+
+const corsOptions = {
+  origin: 'http://localhost:3000',
+  credentials: true,              
+};
 
 // Configure server
 const app = express()
@@ -33,16 +39,30 @@ const app = express()
     })
   );
 
+  app.use(cors());
+
+  app.use((req, res, next) => {
+    res.setHeader('Cross-Origin-Resource-Policy', 'cross-origin');
+    next();
+  });
+
+  app.use((req, res, next) => {
+    console.log('Request Origin:', req.headers.origin);
+    next();
+  });
+
 app.get('/', (req, res) => {
   res.send('Server started');
   res.end();
 });
 
 // Routing
-app.use('/auth', authRouter);
-app.use('/passportApplication', passportRouter);
-app.use('/loanApplication', loanRouter);
-app.use('/trafficTicket', trafficRouter);
+app.use('/api/auth', authRouter);
+app.use('/api/passportApplication', passportRouter);
+app.use('/api/loanApplication', loanRouter);
+app.use('/api/trafficTicket', trafficRouter);
+
+
 
 // Error handler
 app.use((err, req, res, next) => {
@@ -77,11 +97,18 @@ app.use((err, req, res, next) => {
   }
 });
 
+
+
+console.log('process.env.NODE_ENV',process.env.NODE_ENV)
+
 // Serve static assets if in production
 if (process.env.NODE_ENV === 'production') {
-  console.log('In production');
+  console.log('Serving static assets from:', path.join(__dirname, 'assets', 'public'));
   app.use('/assets', express.static(path.join(__dirname, 'assets', 'public')));
 }
+
+
+
 
 const port = process.env.PORT_NUMBER;
 app.listen(port, () => {

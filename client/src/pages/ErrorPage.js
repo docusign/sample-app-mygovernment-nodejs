@@ -21,7 +21,7 @@ function ErrorPage() {
         )}
         <button
           className="grey-button-fixed-size"
-          onClick={() => navigate('/index')}
+          onClick={() => navigate('/')}
         >
           {backLinkName}
         </button>
