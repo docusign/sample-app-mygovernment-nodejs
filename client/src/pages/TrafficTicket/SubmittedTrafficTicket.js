@@ -7,8 +7,8 @@ import { useNavigate } from 'react-router-dom';
 function SubmittedTrafficTicket({ text }) {
   let navigate = useNavigate();
   let mountedRef = useRef(true);
-  const millieAvatarUrl = '/assets/img/millie_avatar.png';
-  const codyAvatarUrl = '/assets/img/cody_avatar.png';
+  const millieAvatarUrl = `${process.env.REACT_APP_API_URL}/assets/img/millie_avatar.png`;
+  const codyAvatarUrl = `${process.env.REACT_APP_API_URL}/assets/img/cody_avatar.png`;
   const witnessStatementUrl =
     '/receive-traffic-ticket/request-witness-statement';
   const mitigationClerkName = text.names.mitigationClerkName;
@@ -33,7 +33,7 @@ function SubmittedTrafficTicket({ text }) {
   // description of the page accordingly.
   async function getUserChoice() {
     try {
-      let response = await axios.get('/api/trafficTicket/submitted');
+      let response = await axios.get(`${process.env.REACT_APP_API_URL}/api/trafficTicket/submitted`);
 
       // Only set states if the component is mounted, otherwise return null.
       if (!mountedRef.current) return null;

@@ -3,8 +3,8 @@ import parse from 'html-react-parser';
 
 function BehindTheScenes({ title, description }) {
   const parsedDescription = parse(description);
-  const upCaretUrl = '/assets/img/up_caret.svg';
-  const downCaretUrl = '/assets/img/down_caret.svg';
+  const upCaretUrl = `${process.env.REACT_APP_API_URL}/assets/img/up_caret.svg`;
+  const downCaretUrl = `${process.env.REACT_APP_API_URL}/assets/img/down_caret.svg`;
   const [showDesc, setShowDesc] = useState(false);
 
   return (

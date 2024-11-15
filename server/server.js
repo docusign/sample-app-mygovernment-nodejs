@@ -23,7 +23,6 @@ const corsOptions = {
   credentials: true,              
 };
 
-// Configure server
 const app = express()
   .use(helmet())
   .use(bodyParser.json())
@@ -32,28 +31,29 @@ const app = express()
     cookieSession({
       name: 'MyGovernmentApp',
       maxAge: maxSessionAge,
-      secret: process.env.SESSION_SECRET,
+      keys: [process.env.SESSION_SECRET],
       httpOnly: true,
-      secure: false, // Set to false when testing on localhost, otherwise to "true"
+      secure: false,
       sameSite: 'lax',
     })
   );
 
-  app.use(cors());
+  app.use(cors(corsOptions));
 
   app.use((req, res, next) => {
     res.setHeader('Cross-Origin-Resource-Policy', 'cross-origin');
     next();
   });
 
-  app.use((req, res, next) => {
-    console.log('Request Origin:', req.headers.origin);
-    next();
-  });
 
 app.get('/', (req, res) => {
   res.send('Server started');
   res.end();
+});
+
+app.get('/check-session', (req, res) => {
+  console.log('Session data:', req.session);
+  res.json(req.session);
 });
 
 // Routing
