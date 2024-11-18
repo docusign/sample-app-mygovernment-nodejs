@@ -22,7 +22,7 @@ services:
         REACT_APP_API_URL: "http://backend:5000" 
     container_name: my-frontend
     ports:
-      - "3000:80"
+      - "80:80"
     depends_on:
       - backend
     env_file:
