@@ -24,6 +24,8 @@ import Header from './components/Header';
 import WitnessStatement from './pages/TrafficTicket/WitnessStatement';
 import { handleError } from './api/apiHelper';
 
+axios.defaults.withCredentials = true;
+
 function App() {
   let mountedRef = useRef(true);
   const [textContent, setTextContent] = useState('');
@@ -42,8 +44,7 @@ function App() {
   // populate the app.
   async function getTextContent() {
     try {
-      let response = await axios.get('/assets/text.json');
-
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/assets/text.json`);
       // Only set states if the component is mounted, otherwise return null.
       if (!mountedRef.current) return null;
 

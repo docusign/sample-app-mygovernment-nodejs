@@ -7,7 +7,7 @@ import Popup from '../components/Popup';
 function Login({ text, githubText, btsText }) {
   const [submitted, setSubmitted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const heroUrl = '/assets/img/hero.png';
+  const heroUrl = `${process.env.REACT_APP_API_URL}/assets/img/hero.png`;
   let navigate = useNavigate();
 
   // Logs the user in, and redirects the user to a consent window if
@@ -15,8 +15,7 @@ function Login({ text, githubText, btsText }) {
   async function handleLogin() {
     try {
       setSubmitted(true);
-
-      let response = await axios.get('/auth/login');
+      let response = await axios.get(`${process.env.REACT_APP_API_URL}/api/auth/login`);
 
       // If user has never logged in before, redirect to consent screen
       if (response.status === 210) {
