@@ -32,7 +32,7 @@ function WitnessStatement({ text, formText, btsText }) {
 
     // Send request to server
     try {
-      const response = await sendRequest(`${process.env.REACT_APP_API_URL}/api/trafficTicket/sms`, body);
+      const response = await sendRequest(`${process.env.REACT_APP_API_URL}/trafficTicket/sms`, body);
       console.log(response.data);
 
       // Set submitted to true to rerender page.

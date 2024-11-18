@@ -19,7 +19,7 @@ function RequireAuth() {
 
   async function isLoggedIn() {
     try {
-      let response = await axios.get(`${process.env.REACT_APP_API_URL}/api/auth/isLoggedIn`);
+      let response = await axios.get(`${process.env.REACT_APP_API_URL}/auth/isLoggedIn`);
 
       // Only set states if the component is mounted, otherwise return null.
       if (!mountedRef.current) return null;

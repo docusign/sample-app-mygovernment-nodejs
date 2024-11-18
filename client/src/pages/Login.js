@@ -15,7 +15,7 @@ function Login({ text, githubText, btsText }) {
   async function handleLogin() {
     try {
       setSubmitted(true);
-      let response = await axios.get(`${process.env.REACT_APP_API_URL}/api/auth/login`);
+      let response = await axios.get(`${process.env.REACT_APP_API_URL}/auth/login`);
 
       // If user has never logged in before, redirect to consent screen
       if (response.status === 210) {

@@ -22,7 +22,7 @@ function Passport({ text, formText, btsText }) {
 
     // Send request to server
     try {
-      const response = await sendRequest(`${process.env.REACT_APP_API_URL}/api/passportApplication`, body);
+      const response = await sendRequest(`${process.env.REACT_APP_API_URL}/passportApplication`, body);
       console.log(response.data);
 
       // Redirect to success screen

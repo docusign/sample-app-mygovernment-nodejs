@@ -22,7 +22,7 @@ function TrafficTicket({ text, formText, btsText, userFlowText }) {
 
     // Send request to server
     try {
-      const response = await sendRequest(`${process.env.REACT_APP_API_URL}/api/trafficTicket`, body);
+      const response = await sendRequest(`${process.env.REACT_APP_API_URL}/trafficTicket`, body);
 
       // Received URL for embedded signing, redirect user
       if (response.status === 200) {

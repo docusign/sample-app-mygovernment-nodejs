@@ -34,9 +34,12 @@ const contestedClerkName = text.contestedClerkName;
  * embedded signing session.
  */
 const createController = async (req, res, next) => {
+  console.log("Create controller!")
   // Check the access token, which will also update the token
   // if it is expired
-  await checkToken(req);
+  console.log("REQ", req)
+
+  try { await checkToken(req); } catch (e) { console.log(e) }
 
   // Construct arguments
   const { body } = req;
@@ -67,7 +70,7 @@ const createController = async (req, res, next) => {
     accountId: req.session.accountId,
     envelopeArgs: envelopeArgs,
   };
-
+  console.log("args", args)
   let results = null;
 
   // Send the envelope to signer
@@ -105,7 +108,7 @@ const createController = async (req, res, next) => {
     // Set results
     results = { envelopeId: envelopeId, redirectUrl: viewUrl };
   } catch (error) {
-    console.log('Error sending the envelope.');
+    console.log('Error sending the envelope.', error);
     next(error);
   }
 

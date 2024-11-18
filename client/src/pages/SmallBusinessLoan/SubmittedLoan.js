@@ -24,8 +24,8 @@ function SubmittedLoan({ text }) {
   // GETs the loan amount that the user inputted in their loan application,
   // and sets the lender name accordingly.
   async function getLoanAmount() {
-    try{
-      let response = await axios.get(`${process.env.REACT_APP_API_URL}/api/loanApplication/submitted`);
+    try {
+      let response = await axios.get(`${process.env.REACT_APP_API_URL}/loanApplication/submitted`);
 
       // Only set states if the component is mounted, otherwise return null.
       if (!mountedRef.current) return null;

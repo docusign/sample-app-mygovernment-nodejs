@@ -19,8 +19,8 @@ const trafficRouter = require('./routes/trafficRouter');
 const maxSessionAge = 1000 * 60 * 60 * 24 * 1; // One day
 
 const corsOptions = {
-  origin: 'http://localhost:3000',
-  credentials: true,              
+  origin: ['http://frontend:3000', 'http://localhost:3000', 'http://localhost:80'],
+  credentials: true,
 };
 
 const app = express()
@@ -38,12 +38,12 @@ const app = express()
     })
   );
 
-  app.use(cors(corsOptions));
+app.use(cors());
 
-  app.use((req, res, next) => {
-    res.setHeader('Cross-Origin-Resource-Policy', 'cross-origin');
-    next();
-  });
+app.use((req, res, next) => {
+  res.setHeader('Cross-Origin-Resource-Policy', 'cross-origin');
+  next();
+});
 
 
 app.get('/', (req, res) => {
@@ -57,10 +57,10 @@ app.get('/check-session', (req, res) => {
 });
 
 // Routing
-app.use('/api/auth', authRouter);
-app.use('/api/passportApplication', passportRouter);
-app.use('/api/loanApplication', loanRouter);
-app.use('/api/trafficTicket', trafficRouter);
+app.use('/auth', authRouter);
+app.use('/passportApplication', passportRouter);
+app.use('/loanApplication', loanRouter);
+app.use('/trafficTicket', trafficRouter);
 
 
 
@@ -99,7 +99,7 @@ app.use((err, req, res, next) => {
 
 
 
-console.log('process.env.NODE_ENV',process.env.NODE_ENV)
+console.log('process.env.NODE_ENV', process.env.NODE_ENV)
 
 // Serve static assets if in production
 if (process.env.NODE_ENV === 'production') {
@@ -111,6 +111,7 @@ if (process.env.NODE_ENV === 'production') {
 
 
 const port = process.env.PORT_NUMBER;
-app.listen(port, () => {
+console.log('port on server', port)
+app.listen(port, '0.0.0.0', () => {
   console.log(`Server started and listening on port ${port}`);
 });

@@ -33,7 +33,7 @@ function SubmittedTrafficTicket({ text }) {
   // description of the page accordingly.
   async function getUserChoice() {
     try {
-      let response = await axios.get(`${process.env.REACT_APP_API_URL}/api/trafficTicket/submitted`);
+      let response = await axios.get(`${process.env.REACT_APP_API_URL}/trafficTicket/submitted`);
 
       // Only set states if the component is mounted, otherwise return null.
       if (!mountedRef.current) return null;

@@ -61,7 +61,7 @@ const getUserInfo = async (req) => {
     const targetAccountId = process.env.targetAccountId;
     const baseUriSuffix = '/restapi';
     eSignApi.setOAuthBasePath(oAuthBasePath);
-
+    console.log("Seesion Access token", req.session.accessToken)
     const results = await eSignApi.getUserInfo(req.session.accessToken);
 
     let accountInfo;
@@ -74,7 +74,7 @@ const getUserInfo = async (req) => {
     if (typeof accountInfo === 'undefined') {
       throw new Error(`Target account ${targetAccountId} not found!`);
     }
-
+    console.log("accountInfo", accountInfo)
     req.session.accountId = accountInfo.accountId;
     req.session.basePath = accountInfo.baseUri + baseUriSuffix;
   } catch (error) {
@@ -85,15 +85,14 @@ const getUserInfo = async (req) => {
 const login = async (req, res, next) => {
   try {
     req.session.isLoggedIn = true;
-    await checkToken(req);
-    await getUserInfo(req);
+    try { await checkToken(req); await getUserInfo(req); } catch (e) { console.log(e) }
     res.status(200).send('Successfully logged in.');
   } catch (error) {
     if (error.message === 'Consent required') {
       const consent_scopes = scopes + '%20impersonation';
       const consent_url = `${process.env.DS_OAUTH_SERVER}/oauth/auth?response_type=code&` +
-                          `scope=${consent_scopes}&client_id=${process.env.INTEGRATION_KEY}&` +
-                          `redirect_uri=${process.env.REDIRECT_URI_HOME}`;
+        `scope=${consent_scopes}&client_id=${process.env.INTEGRATION_KEY}&` +
+        `redirect_uri=${process.env.REDIRECT_URI_HOME}`;
       res.status(210).send(consent_url);
     } else {
       req.session.isLoggedIn = false;
