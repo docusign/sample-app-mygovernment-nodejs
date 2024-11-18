@@ -19,7 +19,7 @@ const trafficRouter = require('./routes/trafficRouter');
 const maxSessionAge = 1000 * 60 * 60 * 24 * 1; // One day
 
 const corsOptions = {
-  origin: 'http://localhost:3000',
+  origin: ['http://frontend:3000', 'http://localhost:3000'],
   credentials: true,              
 };
 
@@ -111,6 +111,7 @@ if (process.env.NODE_ENV === 'production') {
 
 
 const port = process.env.PORT_NUMBER;
-app.listen(port, () => {
+console.log('port on server',port)
+app.listen(port,'0.0.0.0', () => {
   console.log(`Server started and listening on port ${port}`);
 });
