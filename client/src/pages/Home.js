@@ -17,7 +17,7 @@ function Home({ text, footerText }) {
   // stored for making Docusign API calls.
   async function getUserInfo() {
     try {
-      let response = await axios.get('/auth/login');
+      let response = await axios.get(`${process.env.REACT_APP_API_URL}/auth/login`);
 
       // If the user revoked consent after logging in, check to make
       // sure they still have consent
@@ -41,7 +41,7 @@ function Home({ text, footerText }) {
         <div className="card-holder">
           <Card
             cardType="small-business-card"
-            iconUrl="/assets/img/small_business.png"
+            iconUrl={`${process.env.REACT_APP_API_URL}/assets/img/small_business.png`}
             linkTo="/apply-for-small-business-loan"
             title={text.smallBusiness}
             featureList={text.smallBusinessFeatures}
@@ -49,7 +49,7 @@ function Home({ text, footerText }) {
           />
           <Card
             cardType="traffic-ticket-card"
-            iconUrl="/assets/img/traffic_ticket.png"
+            iconUrl={`${process.env.REACT_APP_API_URL}/assets/img/traffic_ticket.png`}
             linkTo="/receive-traffic-ticket"
             title={text.trafficTicket}
             featureList={text.trafficTicketFeatures}
@@ -57,7 +57,7 @@ function Home({ text, footerText }) {
           />
           <Card
             cardType="passport-card"
-            iconUrl="/assets/img/passport.png"
+            iconUrl={`${process.env.REACT_APP_API_URL}/assets/img/passport.png`}
             linkTo="/apply-for-passport"
             title={text.passportApplication}
             featureList={text.passportFeatures}

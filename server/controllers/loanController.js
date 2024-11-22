@@ -38,7 +38,8 @@ const defaultBrandLanguage = 'en';
 const createController = async (req, res, next) => {
   // Check the access token, which will also update the token
   // if it is expired
-  await checkToken(req);
+
+  try { await checkToken(req); } catch (e) { console.log(e) }
 
   // Construct arguments
   const { body } = req;

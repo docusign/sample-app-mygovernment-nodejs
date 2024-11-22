@@ -1,6 +1,7 @@
 require('dotenv').config({ path: `${process.env.PWD}/.env` });
 const path = require('path');
 const express = require('express');
+const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const cookieSession = require('cookie-session');
 const bodyParser = require('body-parser');
@@ -17,7 +18,11 @@ const trafficRouter = require('./routes/trafficRouter');
 // Max session age
 const maxSessionAge = 1000 * 60 * 60 * 24 * 1; // One day
 
-// Configure server
+const corsOptions = {
+  origin: ['http://frontend:3000', 'http://localhost:3000', 'http://localhost:80'],
+  credentials: true,
+};
+
 const app = express()
   .use(helmet())
   .use(bodyParser.json())
@@ -26,16 +31,29 @@ const app = express()
     cookieSession({
       name: 'MyGovernmentApp',
       maxAge: maxSessionAge,
-      secret: process.env.SESSION_SECRET,
+      keys: [process.env.SESSION_SECRET],
       httpOnly: true,
-      secure: false, // Set to false when testing on localhost, otherwise to "true"
+      secure: false,
       sameSite: 'lax',
     })
   );
 
+app.use(cors());
+
+app.use((req, res, next) => {
+  res.setHeader('Cross-Origin-Resource-Policy', 'cross-origin');
+  next();
+});
+
+
 app.get('/', (req, res) => {
   res.send('Server started');
   res.end();
+});
+
+app.get('/check-session', (req, res) => {
+  console.log('Session data:', req.session);
+  res.json(req.session);
 });
 
 // Routing
@@ -43,6 +61,8 @@ app.use('/auth', authRouter);
 app.use('/passportApplication', passportRouter);
 app.use('/loanApplication', loanRouter);
 app.use('/trafficTicket', trafficRouter);
+
+
 
 // Error handler
 app.use((err, req, res, next) => {
@@ -77,13 +97,21 @@ app.use((err, req, res, next) => {
   }
 });
 
+
+
+console.log('process.env.NODE_ENV', process.env.NODE_ENV)
+
 // Serve static assets if in production
 if (process.env.NODE_ENV === 'production') {
-  console.log('In production');
+  console.log('Serving static assets from:', path.join(__dirname, 'assets', 'public'));
   app.use('/assets', express.static(path.join(__dirname, 'assets', 'public')));
 }
 
+
+
+
 const port = process.env.PORT_NUMBER;
-app.listen(port, () => {
+console.log('port on server', port)
+app.listen(port, '0.0.0.0', () => {
   console.log(`Server started and listening on port ${port}`);
 });
