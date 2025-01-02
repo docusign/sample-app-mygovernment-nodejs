@@ -21,6 +21,7 @@
     "concurrently": "^9.1.0",
     "cookie-parser": "^1.4.7",
     "cookie-session": "^2.1.0",
+    "cors": "^2.8.5",
     "dayjs": "^1.11.13",
     "docusign-esign": "8.0.1",
     "dotenv": "^16.4.5",
