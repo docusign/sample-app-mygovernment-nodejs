@@ -6,8 +6,8 @@ import Success from '../Success';
 
 function SubmittedLoan({ text }) {
   let mountedRef = useRef(true);
-  const sageAvatarUrl = '/assets/img/sage_avatar.png';
-  const blaireAvatarUrl = '/assets/img/blaire_avatar.png';
+  const sageAvatarUrl = `${process.env.REACT_APP_API_URL}/assets/img/sage_avatar.png`;
+  const blaireAvatarUrl = `${process.env.REACT_APP_API_URL}/assets/img/blaire_avatar.png`;
   const [lenderName, setLenderName] = useState('');
   const [avatarUrl, setAvatarUrl] = useState('');
   let navigate = useNavigate();
@@ -25,7 +25,7 @@ function SubmittedLoan({ text }) {
   // and sets the lender name accordingly.
   async function getLoanAmount() {
     try {
-      let response = await axios.get('/loanApplication/submitted');
+      let response = await axios.get(`${process.env.REACT_APP_API_URL}/loanApplication/submitted`);
 
       // Only set states if the component is mounted, otherwise return null.
       if (!mountedRef.current) return null;

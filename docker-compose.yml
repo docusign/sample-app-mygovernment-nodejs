@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  frontend:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+      args:
+        REACT_APP_API_URL: "http://localhost/api" 
+    container_name: frontend
+    ports:
+      - 80:80
+      - 443:443
+    env_file:
+      - ./client/.env
+
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: backend
+    env_file:
+      - ./server/.env

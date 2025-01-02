@@ -9,8 +9,8 @@ function WitnessStatement({ text, formText, btsText }) {
   let navigate = useNavigate();
   const [requesting, setRequesting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const codyAvatarUrl = '/assets/img/cody_avatar.png';
-  const paulaAvatarUrl = '/assets/img/paula_avatar.png';
+  const codyAvatarUrl = `${process.env.REACT_APP_API_URL}/assets/img/cody_avatar.png`;
+  const paulaAvatarUrl = `${process.env.REACT_APP_API_URL}/assets/img/paula_avatar.png`;
   const policeName = text.names.policeName;
   const description = text.submitted.contestedSent.description.replaceAll(
     '{policeName}',
@@ -32,7 +32,7 @@ function WitnessStatement({ text, formText, btsText }) {
 
     // Send request to server
     try {
-      const response = await sendRequest('/trafficTicket/sms', body);
+      const response = await sendRequest(`${process.env.REACT_APP_API_URL}/trafficTicket/sms`, body);
       console.log(response.data);
 
       // Set submitted to true to rerender page.
