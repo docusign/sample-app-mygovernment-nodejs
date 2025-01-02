@@ -90,5 +90,12 @@ The traffic ticket and passport application use cases require a payment gateway 
    - In a separate terminal, navigate to the client folder (**`cd client`**) and run **`npm start`**
 5. Open a browser to **http://localhost:3000**
 
+## Running MyGovernment with Docker
+
+1. Navigate to the application folder: **`cd sample-app-mygovernment-nodejs`**
+2. Copy your .env file into the server folder
+3. Run **`docker compose up`**
+4. Open a browser to **http://localhost**
+
 ## License information
 This repository uses the MIT License. See the [LICENSE](./LICENSE) file for more information.
