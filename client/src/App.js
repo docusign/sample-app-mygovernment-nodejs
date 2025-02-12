@@ -166,7 +166,6 @@ function App() {
               element={<PageNotFound text={textContent.pageNotFound} />}
             />
           </Routes>
-          <footer className="copyright">{textContent.footer.copyright}</footer>
         </Router>
       ) : (
         // Display nothing while static assets are being loaded in.

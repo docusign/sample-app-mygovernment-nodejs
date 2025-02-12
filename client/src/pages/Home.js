@@ -65,7 +65,6 @@ function Home({ text, footerText }) {
           />
         </div>
 
-        <Footer text={footerText} />
       </div>
     </section>
   );
