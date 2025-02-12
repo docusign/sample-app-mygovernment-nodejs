@@ -22,7 +22,7 @@
   },
   "header": {
     "githubButton": "GitHub Source",
-    "githubLink": "https://github.com/docusign/sample-app-mygovernment-nodejs"
+    "githubLink": "https://github.com/docusign/sample-app-public-sector-nodejs"
   },
   "footer": {
     "copyright": "© 2024 Docusign Inc.",
@@ -34,7 +34,7 @@
     "learnMoreLink": "https://developers.docusign.com/"
   },
   "home": {
-    "title": "Welcome to MyGovernment",
+    "title": "Welcome to the Government Sample App",
     "smallBusiness": "Small Business Loan",
     "trafficTicket": "Traffic Ticket",
     "passportApplication": "Passport Application",
@@ -72,7 +72,7 @@
     "submittedLoanTitle": "Loan application has been sent for approval",
     "description": "Based on the your loan amount, your loan application has been sent to “{lenderName}” to approve.<br></br>Now, acting as {lenderName}, check the same email you provided previously for a copy of the loan application to approve.",
     "envelope": {
-      "brandName": "MyGovernment Loan Agency Brand",
+      "brandName": "Government Loan Agency Brand",
       "loan1DocName": "Loan Application SAMPLE",
       "loan2DocName": "Loan Approval Checklist SAMPLE",
       "loanEmailSubject": "Please complete the following: Loan Application SAMPLE, Loan Approval Checklist SAMPLE",

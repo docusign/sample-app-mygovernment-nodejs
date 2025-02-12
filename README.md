@@ -1,12 +1,12 @@
-# Node.js and React: MyGovernment Sample Application
+# Node.js and React: Government Sample App
 
 ## Introduction
 
-Welcome to the MyGovernment sample app! MyGovernment is written using Node.js (server) and React (client), and shows a possible integration by a government agency with Docusign eSignature.
+Welcome to the Government Sample App! It is written using Node.js (server) and React (client), and shows a possible integration by a government agency with Docusign eSignature.
 
-You can find a live instance running at https://mygovernment.sampleapps.docusign.com/.
+You can find a live instance running at https://government.sampleapps.docusign.com/.
 
-MyGovernment demonstrates the following:
+The Government Sample App demonstrates the following:
 
 1. Authentication with Docusign via [JSON Web Token (JWT) Grant](https://developers.docusign.com/platform/auth/jwt/).
 2. **Apply for a small business loan:** The user can apply for a government-backed small business loan through an embedded signing session. Then, depending on how much their loan amount is, the user will receive an email addressed to a government employee named either "Sage Small Lender" or "Blaire Big Lender" to approve the loan application. Features in this use case:
@@ -62,8 +62,8 @@ The following must be enabled on your developer account in order to run all of t
 
 ### Install dependencies locally
 
-1. Download or clone this repository to your workstation in a new folder named **sample-app-mygovernment-nodejs**.
-2. Navigate to that folder: **`cd sample-app-mygovernment-nodejs`**
+1. Download or clone this repository to your workstation in a new folder named **sample-app-public-sector-nodejs**.
+2. Navigate to that folder: **`cd sample-app-government-nodejs`**
 3. Navigate to the **client** folder: **`cd client`**
 4. Install dependencies using the [npm](https://www.npmjs.com/) package manager: **`npm install`**
 5. Navigate to the **server** folder: **`cd ../server`**
@@ -80,9 +80,9 @@ The traffic ticket and passport application use cases require a payment gateway 
 2. For development, you can skip the Stripe account application by using the **Skip this account form** link at the top of the page. An enabled Stripe payment gateway is now associated with your Docusign developer account and is shown under **Payment Gateway**.
 3. Save the **Gateway Account ID** GUID to your .env file and update the other relevant settings under **Payment configuration**.
 
-## Running MyGovernment
+## Running the Government Sample App
 
-1. Navigate to the application folder: **`cd sample-app-mygovernment-nodejs`**
+1. Navigate to the application folder: **`cd sample-app-government-nodejs`**
 2. Navigate to the server folder: **`cd server`**
 3. To start the server and client at the same time: **`npm run dev`**
 4. **Or,** to run the server and client separately:
@@ -90,9 +90,9 @@ The traffic ticket and passport application use cases require a payment gateway 
    - In a separate terminal, navigate to the client folder (**`cd client`**) and run **`npm start`**
 5. Open a browser to **http://localhost:3000**
 
-## Running MyGovernment with Docker
+## Running the Government Sample Appt with Docker
 
-1. Navigate to the application folder: **`cd sample-app-mygovernment-nodejs`**
+1. Navigate to the application folder: **`cd sample-app-government-nodejs`**
 2. Copy your .env file into the server folder
 3. Run **`docker compose up`**
 4. Open a browser to **http://localhost**
