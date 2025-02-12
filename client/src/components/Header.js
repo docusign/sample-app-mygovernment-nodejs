@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 function Header({ text }) {
-  const appName = 'MyGovernment';
+  const appName = 'Government Sample App';
   const logoUrl = `${process.env.REACT_APP_API_URL}/assets/img/logo.svg`;
   let location = useLocation();
 
