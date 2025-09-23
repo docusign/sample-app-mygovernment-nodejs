@@ -44,7 +44,7 @@
   },
   "login": {
     "title": "Welcome to the Government Sample Application",
-    "description": "This app was designed to showcase a potential integration of Docusign eSignature with a government agency. This application is open source and all of the code is located in our GitHub repository.",
+    "description": "This app was designed to showcase a potential integration of Docusign eSignature with a government agency. This application supports JWT authentication and is fully open source, with all code available in our GitHub repository.",
     "loginButton": "Try the App",
     "moreInfoButton": "More Info",
     "logoutButton": "Logout"
