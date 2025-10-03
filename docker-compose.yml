@@ -6,7 +6,7 @@ services:
       context: ./client
       dockerfile: Dockerfile
       args:
-        REACT_APP_API_URL: "http://localhost/api" 
+        REACT_APP_API_URL: "http://localhost:8000" 
     container_name: frontend
     ports:
       - 80:80
@@ -19,5 +19,7 @@ services:
       context: ./server
       dockerfile: Dockerfile
     container_name: backend
+    ports:
+      - 8000:8000
     env_file:
       - ./server/.env

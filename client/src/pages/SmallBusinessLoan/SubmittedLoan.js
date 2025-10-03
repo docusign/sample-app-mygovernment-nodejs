@@ -6,8 +6,8 @@ import Success from '../Success';
 
 function SubmittedLoan({ text }) {
   let mountedRef = useRef(true);
-  const sageAvatarUrl = `${process.env.REACT_APP_API_URL}/assets/img/sage_avatar.png`;
-  const blaireAvatarUrl = `${process.env.REACT_APP_API_URL}/assets/img/blaire_avatar.png`;
+  const sageAvatarUrl = `${process.env.REACT_APP_ASSETS_URL}/img/sage_avatar.png`;
+  const blaireAvatarUrl = `${process.env.REACT_APP_ASSETS_URL}/img/blaire_avatar.png`;
   const [lenderName, setLenderName] = useState('');
   const [avatarUrl, setAvatarUrl] = useState('');
   let navigate = useNavigate();

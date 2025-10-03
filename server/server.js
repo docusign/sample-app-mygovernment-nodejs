@@ -19,7 +19,7 @@ const trafficRouter = require('./routes/trafficRouter');
 const maxSessionAge = 1000 * 60 * 60 * 24 * 1; // One day
 
 const corsOptions = {
-  origin: ['http://frontend:3000', 'http://localhost:3000', 'http://localhost:80'],
+  origin: ['http://frontend:3000', 'http://localhost:3000', 'http://localhost:80', 'http://localhost', 'http://localhost:80'],
   credentials: true,
 };
 
@@ -38,7 +38,7 @@ const app = express()
     })
   );
 
-app.use(cors());
+app.use(cors(corsOptions));
 
 app.use((req, res, next) => {
   res.setHeader('Cross-Origin-Resource-Policy', 'cross-origin');
@@ -61,8 +61,6 @@ app.use('/auth', authRouter);
 app.use('/passportApplication', passportRouter);
 app.use('/loanApplication', loanRouter);
 app.use('/trafficTicket', trafficRouter);
-
-
 
 // Error handler
 app.use((err, req, res, next) => {
@@ -104,7 +102,7 @@ console.log('process.env.NODE_ENV', process.env.NODE_ENV)
 // Serve static assets if in production
 if (process.env.NODE_ENV === 'production') {
   console.log('Serving static assets from:', path.join(__dirname, 'assets', 'public'));
-  app.use('/assets', express.static(path.join(__dirname, 'assets', 'public')));
+  app.use('/app/assets', express.static(path.join(__dirname, 'assets', 'public')));
 }
 
 

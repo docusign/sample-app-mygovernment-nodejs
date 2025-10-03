@@ -7,7 +7,7 @@ import BehindTheScenes from '../components/BehindTheScenes';
 function Passport({ text, formText, btsText }) {
   let navigate = useNavigate();
   const [requesting, setRequesting] = useState(false);
-  const avatarUrl = `${process.env.REACT_APP_API_URL}/assets/img/default_avatar.png`;
+  const avatarUrl = `${process.env.REACT_APP_ASSETS_URL}/img/default_avatar.png`;
 
   // Sends POST request to server to send envelope based on the
   // info the user provided in the form.
